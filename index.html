@@ -1,175 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head> 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Portfolio de I.V.C.</title>
-        <meta name="robots" content="index, follow">
-        <meta name="theme-color" content="#63o">
-        <link rel="icon" type="jpeg" href="logo.png">
-        <meta name="description" content="Portfolio de IVC">
-        <!-- open graph-->
-        <meta property="og:title" content="PORTFOLIO DE I.V.C.">
-        <meta property="og:description" content="website de inicio donde Iván muestra sus primeros pasos en HTML">
-        <!-- alternativo en ingles
-        <link rel="alternate" href="https://jag.com" hreflang="es-GB">
-        -->
-        <!-- para indicar cual es la pg original
-        <link rel="canonical" href="https://jag.com">
-        -->
-        <style>
-            body {
-                background: rgba(225,18,63,0.5);
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Portfolio de I.V.C.</h1>
-            <dialog id="modal">
-                <h1>Se puede abrir un modal</h1>
-                <p>Es totalmente nativo</p>
-                <button id="cerrar">Cerrar</button>
-            </dialog>  
-            <button id="show">Ver más información</button>
-            <script>
-                window.show.addEventListener('click',()=>{
-                    window.modal.showModal()
-                });
-                window.cerrar.addEventListener('click',()=>{
-                    window.modal.close()
-                })
-            </script>
-        <nav>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
-        </nav>
-    </header>    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de I.V.C.</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#63c">
+    <link rel="icon" type="image/jpeg" href="logo.png">
+    <meta name="description" content="Portfolio de IVC">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio de I.V.C.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitch.tv/midudev" target="_blank" rel="noreferrer">Twitch</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <video muted src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"></video>
-    
-        <header>
-            <h1>PORTFOLIO DE IVÁN V.C.</h1>
-            <p><strong>Ingeniero de Software</strong></p>
-        </header>
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Portfolio de Iván V.C.</h1>
+            <p class="lead">Ingeniero de Software</p>
+            <button id="show" class="btn btn-light">Ver más información</button>
+        </div>
+    </header>
 
-        <section>
-            <h2 id="experiencia">Experiencia</h2>
-            <ul>
-                <li class="">ESII</li>
-                <li class="">Maestranza Aérea</li>
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Más información</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Este modal es totalmente nativo y se ha implementado usando Bootstrap.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video -->
+    <section class="text-center my-5">
+        <video width="75%" muted autoplay loop src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" class="rounded"></video>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="container my-5">
+        <h2 class="text-center mb-4">Experiencia</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ESII</li>
+            <li class="list-group-item">Maestranza Aérea</li>
+        </ul>
+        <div class="text-center mt-4">
+            <img src="ivc.png" alt="Iván V.C." class="img-fluid rounded shadow" width="200" height="300">
+        </div>
+    </section>
+
+    <!-- Tecnologías favoritas -->
+    <aside class="bg-light py-4">
+        <div class="container">
+            <h3 class="text-center">Mis tecnologías favoritas</h3>
+            <ul class="list-inline text-center mt-3">
+                <li class="list-inline-item">HTML</li>
+                <li class="list-inline-item">CSS</li>
+                <li class="list-inline-item">JavaScript</li>
             </ul>
-            <img title="foto matón" src="ivc.png" alt="Fotografía de Iván con cara de no haber roto un plato en su vida.">
-        </section>
+        </div>
+    </aside>
 
-        <!-- Tecnologías favoritas usando <aside> -->
-        <aside>
-            <header>
-                <h3>Mis tecnologías favoritas</h3>
-            </header>
-            <ol>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ol>
-        </aside>
+    <!-- Proyectos -->
+    <section id="proyectos" class="container my-5">
+        <h2 class="text-center mb-4">Proyectos realizados</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sitio Web Corporativo</h5>
+                        <p class="card-text">Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.</p>
+                        <footer class="blockquote-footer">HTML, CSS, JavaScript</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aplicación e-commerce</h5>
+                        <p class="card-text">Desarrollo de una aplicación web para una tienda online, con carrito de compras e integración de pagos.</p>
+                        <footer class="blockquote-footer">HTML, CSS, JavaScript</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aplicación móvil para gimnasios</h5>
+                        <p class="card-text">Desarrollo de una aplicación móvil para la gestión de gimnasios, con seguimiento de usuarios y reservas de clases.</p>
+                        <footer class="blockquote-footer">Kotlin, Android Studio</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Proyectos realizados usando <section> y <article> -->
-        <section>
-            <h2 id="proyectos">Proyectos realizados</h2>
+    <!-- FAQ -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Preguntas frecuentes (FAQ)</h2>
+        <details class="mb-3">
+            <summary>¿Cómo puedes contactarme?</summary>
+            <p>Enviando un correo a ivc@gobesp.com</p>
+        </details>
+        <details>
+            <summary>¿Cómo me llamo?</summary>
+            <p>IVÁN V.C.</p>
+        </details>
+    </section>
 
-            <!-- Proyecto 1 -->
-            <article>
-                <header>
-                    <h4>Sitio Web Corporativo</h4>
-                </header>
-                <p>Desarrollo de un sitio Web corporativo con una interfaz amigable y moderna.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-                </footer>
-            </article>
-
-            <!-- Proyecto 2 -->
-            <article>
-                <header>
-                    <h4>Aplicación e-commerce</h4>
-                </header>
-                <p>Desarrollo de una aplicación Web para una tienda online, con carrito de compras e integración de pagos.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
-                </footer>
-            </article>
-
-            <!-- Proyecto 3 -->
-            <article>
-                <header>
-                    <h4>Aplicación móvil para gimnasios</h4>
-                </header>
-                <p>Desarrollo de una aplicación móvil para la gestión de gimnasios, con seguimiento de usuarios y reservas de clases.</p>
-                <footer>
-                    <small>Tecnologías utilizadas: Kotlin, Android Studio</small>
-                </footer>
-            </article>
-        </section>
-        <section>
-            <h2>Preguntas frecuentes (FAQ) </h2>
-            <details>
-                <summary>¿Cómo puedes contactarme?</summary>
-                <p>Enviando un correo a ivc@gobesp.com</p>
-            </details>
-            <details>
-                <summary>¿Cómo me llamo?</summary>
-                <p>IVÁN V.C.</p>
-            </details>
-        </section>
-        <section>
-            <h2>Formulario de contacto</h2>
+    <!-- Formulario de contacto -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Formulario de contacto</h2>
             <form method="post" action="/">
-                <fieldset>
-                    <legend>Información personal</legend>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" placeholder="ivc" required>
-                    <label for="em">email:</label>
-                    <input type="email" id="em" name="em" placeholder="a@gobesp.es" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Otros</legend>
-                    <div>
-                        <label for="why">¿Por quee quieres contactar?:</label>
-                        <select name="why" id="why">
-                            <option value="1">Trabajo</option>
-                            <option value="2">Consulta</option>
-                            <option value="3">Otros</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="terms">Acepta los términos</label>
-                        <input type="checkbox" id="terms" name="terms" required>
-                    </div>
-        
-                    <div>
-                        <datalist id="lang">
-                            <option value="JavaScript"></option>
-                            <option value="Python"></option>
-                            <option value="C++"></option>
-                        </datalist>
-                        <label>¿Que lenguaje necesitas ayuda?</label>
-                        <input list="lang" name="lang">
-                    </div>
-                </fieldset>
-                <input type="submit" value="Enviar contacto">
-                <button type="submit">Enviar contacto</button>
-                <button>Borrar formulario</button>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Iván" required>
+                </div>
+                <div class="mb-3">
+                    <label for="em" class="form-label">Email:</label>
+                    <input type="email" id="em" name="em" class="form-control" placeholder="a@gobesp.es" required>
+                </div>
+                <div class="mb-3">
+                    <label for="why" class="form-label">¿Por qué quieres contactar?</label>
+                    <select name="why" id="why" class="form-select">
+                        <option value="1">Trabajo</option>
+                        <option value="2">Consulta</option>
+                        <option value="3">Otros</option>
+                    </select>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="terms" name="terms" class="form-check-input" required>
+                    <label for="terms" class="form-check-label">Acepta los términos</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar contacto</button>
             </form>
-        </section>
-        </main>
-        <footer>El portfolio más trabajado
-            <a href="mailto:Ivan.Vela@alu.uclm.es">Enviame un correo</a>
-            <a href="whatsapp://send?text=hola IVC">Enviame un whatsapp</a>
-        </footer>
-        </body>
-        
-        </html>
-    </body>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p>El portfolio más trabajado</p>
+        <a href="mailto:Ivan.Vela@alu.uclm.es" class="text-white text-decoration-none">Enviar correo</a> |
+        <a href="whatsapp://send?text=hola IVC" class="text-white text-decoration-none">Enviar Whatsapp</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('show').addEventListener('click', () => {
+            new bootstrap.Modal(document.getElementById('infoModal')).show();
+        });
+    </script>
+</body>
 </html>

@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #63c 0%, #39f 100%);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.navBar__nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navBar__nav-a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navBar__nav-a:hover {
+    background: white;
+    color: #39f;
+    border-radius: 5px;
+}
+
+#show {
+    background-color: #fff;
+    border: none;
+    color: #63c;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#show:hover {
+    background-color: #39f;
+    color: white;
+}
+
+/* Video */
+video {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #39f;
+    border-radius: 10px;
+    max-width: 95%;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid #63c;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+aside {
+    padding: 15px;
+    background: #eef;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+}
+
+/* Articles */
+.articulo {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.articulo:last-child {
+    border-bottom: none;
+}
+
+.articulo__header-h4 {
+    color: #63c;
+}
+
+/* FAQ */
+details {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 15px;
+    background-color: #39f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #63c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #39f;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
